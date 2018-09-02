@@ -1,0 +1,19 @@
+@import '../../../theme.scss';
+
+.home__header-logo {
+    background-color: mat-color($app-primary);
+    font-size: 1.6rem;
+    height: 25rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 5rem; 
+}
+
+#login-btn {
+    text-align: center;
+    padding-top: 15rem;
+}
+
+.fa-google-plus-g {
+    margin-right: .5rem;
+}

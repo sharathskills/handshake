@@ -1,0 +1,46 @@
+# Documentation
+
+## Project Folder Structure
+
+[app]
+    - app.module
+    - app.component
+    - app.routing.module
+
+    [core]
+        - core.module
+        - core.routing.module
+
+        [home]
+            - home.component
+
+    [group]
+        - group.module
+        - group.routing.module
+
+        [group-detail]
+            - group-detail.module
+            - group.detail.component
+
+            [about]
+                - about.module
+                - about.component
+            [feed]
+                - feed.module
+                - feed.component
+            [goal]
+                - goal.module
+                - goal.component
+            [resource]
+                - resource.module
+                - resource.component
+
+        [group-list]
+            - group-list.module
+            - group-list.component
+
+        [shared]
+            [models]
+                - group-model
+            [services]
+                - group-service

@@ -1,0 +1,65 @@
+
+<div class="row">
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+  
+      <span style="margin-left: 3%"></span>
+      <i class="far fa-handshake"></i>
+      <span style="margin-right: 3%"></span>
+      <span>HandShake</span>
+  
+      <span class="example-spacer"></span>
+
+      <button mat-icon-button [matMenuTriggerFor]="addgroup">
+        <mat-icon>add</mat-icon>
+      </button>
+      <mat-menu #addgroup="matMenu">
+        <button mat-menu-item>
+          <mat-icon>group_add</mat-icon>
+          <span>Join Group</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>add_circle_outline</mat-icon>
+          <span>Create Group</span>
+        </button>
+      </mat-menu>
+  
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>people</mat-icon>
+          <span>Group</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>calendar_today</mat-icon>
+          <span>Calendar</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>person</mat-icon>
+          <span>Profile</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item>
+          <mat-icon>power_settings_new</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+  
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  
+  <mat-nav-list>
+    <h3 mat-subheader>Groups</h3>
+    <mat-list-item *ngFor="let g of group" [routerLink]="['/groups', g.id, g.name, 'feed']">
+      <mat-icon mat-list-icon>group</mat-icon>
+      <h4 mat-line>{{g.name}}</h4>
+      <p mat-line> - {{g.members}} members</p>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-nav-list>
+
+</div>
